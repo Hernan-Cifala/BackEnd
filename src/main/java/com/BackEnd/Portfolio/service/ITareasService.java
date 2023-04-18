@@ -14,6 +14,6 @@ public interface ITareasService {
     
     public Tareas traerTareas(Long id);
     
-    public Tareas editarTareas(Long id, String tarea);
+    public Tareas editarTareas(Long id, Tareas tareas);
     
 }

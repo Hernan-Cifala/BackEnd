@@ -38,9 +38,8 @@ public class ConocimientosService implements IConocimientosService {
     }
 
     @Override
-    public Conocimientos editarConocimientos(Long id, String conocimiento) {
-        Conocimientos conocimientos = conoRepo.findById(id).orElse(null);
-        conocimientos.setConocimiento(conocimiento);
+    public Conocimientos editarConocimientos(Long id, Conocimientos conocimientos) {
+        conocimientos.setId(id);
         conoRepo.save(conocimientos);
         return conocimientos;
     }

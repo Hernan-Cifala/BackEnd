@@ -14,6 +14,6 @@ public interface IContactoService {
     
     public Contacto traerContacto(Long id);
     
-    public Contacto editarContacto(Long id, String info);
+    public Contacto editarContacto(Long id, Contacto contacto);
     
 }

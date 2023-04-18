@@ -17,5 +17,6 @@ public class Conocimientos {
     private Long id;
     
     private String conocimiento;
+    private Long formacion_id;
     
 }

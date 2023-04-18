@@ -17,5 +17,6 @@ public class Contacto {
     private Long id;
     
     private String info;
+    private String link;
     
 }

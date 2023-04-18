@@ -4,7 +4,6 @@ package com.BackEnd.Portfolio.service;
 import com.BackEnd.Portfolio.model.Formacion;
 import com.BackEnd.Portfolio.repository.FormacionRepository;
 import java.util.List;
-import jdk.jfr.SettingDescriptor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -39,11 +38,8 @@ public class FormacionService implements IFormacionService{
     }
 
     @Override
-    public Formacion editarFormacion(Long id, String nombre, String descripcion, String certificacion) {
-        Formacion formacion = formaRepo.findById(id).orElse(null);
-        formacion.setNombre(nombre);
-        formacion.setDescripcion(descripcion);
-        formacion.setCertificacion(certificacion);
+    public Formacion editarFormacion(Long id, Formacion formacion) {
+        formacion.setId(id);
         formaRepo.save(formacion);
         return formacion;
     }

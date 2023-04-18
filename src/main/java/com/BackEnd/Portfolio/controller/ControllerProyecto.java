@@ -40,9 +40,9 @@ public class ControllerProyecto {
         return proyeServ.traerProyecto(id);
     }
     
-    @PutMapping ("/proyecto/editar")
-    public Proyecto editarProyecto(@RequestParam Long id, @RequestParam String titulo, @RequestParam String subtitulo, @RequestParam String descripcion) {
-        return proyeServ.editarProyecto(id, titulo, subtitulo, descripcion);
+    @PutMapping ("/proyecto/editar/{id}")
+    public Proyecto editarProyecto(@PathVariable Long id, @RequestBody Proyecto proyecto) {
+        return proyeServ.editarProyecto(id, proyecto);
     }
     
 }

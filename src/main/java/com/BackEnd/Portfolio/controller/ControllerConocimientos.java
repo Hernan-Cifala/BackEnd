@@ -40,9 +40,9 @@ public class ControllerConocimientos {
         return conoServ.traerConocimientos(id);
     }
     
-    @PutMapping ("/conocimientos/editar")
-    public Conocimientos editarConocimientos(@RequestParam Long id, @RequestParam String conocimiento) {
-        return conoServ.editarConocimientos(id, conocimiento);
+    @PutMapping ("/conocimientos/editar/{id}")
+    public Conocimientos editarConocimientos(@PathVariable Long id, @RequestBody Conocimientos conocimientos) {
+        return conoServ.editarConocimientos(id, conocimientos);
     }
     
 }

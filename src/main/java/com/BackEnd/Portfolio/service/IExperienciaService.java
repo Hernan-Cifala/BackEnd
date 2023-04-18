@@ -15,6 +15,6 @@ public interface IExperienciaService {
     
     public Experiencia traerExperiencia(Long id);
     
-    public Experiencia editarExperiencia(Long id, String nombre, boolean actual, Date inicio, Date fin, String logo, String descripcion, String tipo);
+    public Experiencia editarExperiencia(Long id, Experiencia experiencia);
     
 }

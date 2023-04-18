@@ -38,9 +38,8 @@ public class TareasService implements ITareasService {
     }
 
     @Override
-    public Tareas editarTareas(Long id, String tarea) {
-        Tareas tareas = tareRepo.findById(id).orElse(null);
-        tareas.setTarea(tarea);
+    public Tareas editarTareas(Long id, Tareas tareas) {
+        tareas.setId(id);
         tareRepo.save(tareas);
         return tareas;
     }

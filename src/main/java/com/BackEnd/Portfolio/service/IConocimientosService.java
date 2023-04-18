@@ -14,6 +14,6 @@ public interface IConocimientosService {
     
     public Conocimientos traerConocimientos(Long id);
     
-    public Conocimientos editarConocimientos(Long id, String conocimiento);
+    public Conocimientos editarConocimientos(Long id, Conocimientos conocimientos);
     
 }

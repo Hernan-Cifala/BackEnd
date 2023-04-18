@@ -40,9 +40,9 @@ public class ControllerFormacion {
         return formaServ.traerFormacion(id);
     }
     
-    @PutMapping ("/formacion/editar")
-    public Formacion editarFormacion(@RequestParam Long id, @RequestParam String nombre, @RequestParam String descripcion, @RequestParam String certificacion) {
-        return formaServ.editarFormacion(id, nombre, descripcion, certificacion);
+    @PutMapping ("/formacion/editar/{id}")
+    public Formacion editarFormacion(@PathVariable Long id, @RequestBody Formacion formacion) {
+        return formaServ.editarFormacion(id, formacion);
     }
     
 }

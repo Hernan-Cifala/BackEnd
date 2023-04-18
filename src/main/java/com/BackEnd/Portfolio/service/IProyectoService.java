@@ -14,6 +14,6 @@ public interface IProyectoService {
     
     public Proyecto traerProyecto(Long id);
     
-    public Proyecto editarProyecto(Long id, String titulo, String subtitulo, String descripcion);
+    public Proyecto editarProyecto(Long id, Proyecto proyecto);
     
 }

@@ -40,9 +40,9 @@ public class ControllerContacto {
         return contaServ.traerContacto(id);
     }
     
-    @PutMapping ("/contacto/editar")
-    public Contacto editarContacto(@RequestParam Long id, @RequestParam String info) {
-        return contaServ.editarContacto(id, info);
+    @PutMapping ("/contacto/editar/{id}")
+    public Contacto editarContacto(@PathVariable Long id, @RequestBody Contacto contacto) {
+        return contaServ.editarContacto(id, contacto);
     }
     
 }

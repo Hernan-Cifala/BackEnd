@@ -14,6 +14,6 @@ public interface IFormacionService {
     
     public Formacion traerFormacion(Long id);
     
-    public Formacion editarFormacion(Long id, String nombre, String descripcion, String certificacion);
+    public Formacion editarFormacion(Long id, Formacion formacion);
     
 }
