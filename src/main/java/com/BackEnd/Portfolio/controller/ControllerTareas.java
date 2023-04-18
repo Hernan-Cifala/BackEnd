@@ -40,9 +40,9 @@ public class ControllerTareas {
         return tareServ.traerTareas(id);
     }
     
-    @PutMapping ("/tareas/editar")
-    public Tareas editarTareas(@RequestParam Long id, @RequestParam String tarea) {
-        return tareServ.editarTareas(id, tarea);
+    @PutMapping ("/tareas/editar/{id}")
+    public Tareas editarTareas(@PathVariable Long id, @RequestBody Tareas tareas) {
+        return tareServ.editarTareas(id, tareas);
     }
     
 }

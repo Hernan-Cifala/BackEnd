@@ -38,9 +38,8 @@ public class ContactoService implements IContactoService {
     }
 
     @Override
-    public Contacto editarContacto(Long id, String info) {
-        Contacto contacto = contaRepo.findById(id).orElse(null);
-        contacto.setInfo(info);
+    public Contacto editarContacto(Long id, Contacto contacto) {
+        contacto.setId(id);
         contaRepo.save(contacto);
         return contacto;
     }

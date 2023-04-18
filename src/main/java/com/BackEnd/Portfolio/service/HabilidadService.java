@@ -38,9 +38,8 @@ public class HabilidadService implements IHabilidadService{
     }
 
     @Override
-    public Habilidad editarHabilidad(Long id, String ruta) {
-        Habilidad habilidad = habiRepo.findById(id).orElse(null);
-        habilidad.setRuta(ruta);
+    public Habilidad editarHabilidad(Long id, Habilidad habilidad) {
+        habilidad.setId(id);
         habiRepo.save(habilidad);
         return habilidad;
     }

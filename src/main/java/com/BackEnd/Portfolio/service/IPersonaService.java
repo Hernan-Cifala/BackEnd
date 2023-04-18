@@ -14,6 +14,6 @@ public interface IPersonaService {
     
     public Persona traerPersona(Long id);
     
-    public Persona editarPersona(Long id, String nombre, String apellido, String titulo, String resumen, String email, String contraseña, String foto);
+    public Persona editarPersona(Long id, Persona persona);
     
 }

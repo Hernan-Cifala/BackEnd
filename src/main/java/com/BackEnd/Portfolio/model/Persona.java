@@ -22,7 +22,4 @@ public class Persona {
     private String resumen;
     private String foto;
     
-    private String email;
-    private String contraseña;
-    
 }

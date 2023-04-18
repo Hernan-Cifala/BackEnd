@@ -14,6 +14,6 @@ public interface IHabilidadService {
     
     public Habilidad traerHabilidad(Long id);
     
-    public Habilidad editarHabilidad(Long id, String ruta);
+    public Habilidad editarHabilidad(Long id, Habilidad habilidad);
     
 }

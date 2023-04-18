@@ -40,9 +40,9 @@ public class ControllerPersona {
         return persoServ.traerPersona(id);
     }
     
-    @PutMapping ("/persona/editar")
-    public Persona editarPersona(@RequestParam Long id, @RequestParam String nombre, @RequestParam String apellido, @RequestParam String titulo, @RequestParam String resumen, @RequestParam String email, @RequestParam String contraseña, @RequestParam String foto) {
-        return persoServ.editarPersona(id, nombre, apellido, titulo, resumen, email, contraseña, foto);
+    @PutMapping ("/persona/editar/{id}")
+    public Persona editarPersona(@PathVariable Long id, @RequestBody Persona persona) {
+        return persoServ.editarPersona(id, persona);
     }
     
 }

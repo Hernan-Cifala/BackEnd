@@ -41,9 +41,9 @@ public class ControllerExperiencia {
         return expeServ.traerExperiencia(id);
     }
     
-    @PutMapping ("/experiencia/editar")
-    public Experiencia editarExperiencia(@RequestParam Long id, @RequestParam String nombre, @RequestParam boolean actual, @RequestParam Date inicio, @RequestParam Date fin, @RequestParam String logo, @RequestParam String descripcion, @RequestParam String tipo) {
-        return expeServ.editarExperiencia(id, nombre, actual, inicio, fin, logo, descripcion, tipo);
+    @PutMapping ("/experiencia/editar/{id}")
+    public Experiencia editarExperiencia(@PathVariable Long id, @RequestBody Experiencia experiencia) {
+        return expeServ.editarExperiencia(id, experiencia);
     }
     
 }

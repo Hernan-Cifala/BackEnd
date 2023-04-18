@@ -38,11 +38,8 @@ public class ProyectoService implements IProyectoService{
     }
 
     @Override
-    public Proyecto editarProyecto(Long id, String titulo, String subtitulo, String descripcion) {
-        Proyecto proyecto = proyeRepo.findById(id).orElse(null);
-        proyecto.setTitulo(titulo);
-        proyecto.setSubtitulo(subtitulo);
-        proyecto.setDescripcion(descripcion);
+    public Proyecto editarProyecto(Long id, Proyecto proyecto) {
+        proyecto.setId(id);
         proyeRepo.save(proyecto);
         return proyecto;
     }

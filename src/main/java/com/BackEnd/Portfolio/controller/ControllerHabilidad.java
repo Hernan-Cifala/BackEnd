@@ -40,9 +40,9 @@ public class ControllerHabilidad {
         return habiServ.traerHabilidad(id);
     }
     
-    @PutMapping ("/habilidad/editar")
-    public Habilidad editarHabilidad(@RequestParam Long id, @RequestParam String ruta) {
-        return habiServ.editarHabilidad(id, ruta);
+    @PutMapping ("/habilidad/editar/{id}")
+    public Habilidad editarHabilidad(@PathVariable Long id, @RequestBody Habilidad habilidad) {
+        return habiServ.editarHabilidad(id, habilidad);
     }
     
 }

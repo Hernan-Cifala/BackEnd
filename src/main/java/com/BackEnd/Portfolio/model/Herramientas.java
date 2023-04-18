@@ -10,13 +10,13 @@ import lombok.Setter;
 
 @Getter @Setter
 @Entity
-public class Tareas {
+public class Herramientas {
     
     @Id
     @GeneratedValue(strategy=GenerationType.AUTO)
     private Long id;
     
-    private String tarea;
+    private String herramienta;
     private Long proyecto_id;
     
 }

@@ -38,15 +38,8 @@ public class PersonaService implements IPersonaService {
     }
 
     @Override
-    public Persona editarPersona(Long id, String nombre, String apellido, String titulo, String resumen, String email, String contraseña, String foto) {
-        Persona persona = persoRepo.findById(id).orElse(null);
-        persona.setNombre(nombre);
-        persona.setApellido(apellido);
-        persona.setTitulo(titulo);
-        persona.setResumen(resumen);
-        persona.setEmail(email);
-        persona.setContraseña(contraseña);
-        persona.setFoto(foto);
+    public Persona editarPersona(Long id, Persona persona) {
+        persona.setId(id);
         persoRepo.save(persona);
         return persona;
     }
