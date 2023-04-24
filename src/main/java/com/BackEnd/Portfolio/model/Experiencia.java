@@ -19,8 +19,8 @@ public class Experiencia {
     
     private String nombre;
     private boolean actual;
-    private Date inicio;
-    private Date fin;
+    private String inicio;
+    private String fin;
     private String logo;
     private String descripcion;
     private String tipo;
