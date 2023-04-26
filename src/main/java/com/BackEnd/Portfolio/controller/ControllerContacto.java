@@ -22,31 +22,26 @@ public class ControllerContacto {
     private IContactoService contaServ;
     
     @GetMapping ("/contacto/traer")
-    @CrossOrigin(origins = "http://localhost:4200")
     public List<Contacto> traerContactos() {
         return contaServ.traerContactos();
     }
     
     @PostMapping ("/contacto/crear")
-    @CrossOrigin(origins = "http://localhost:4200")
     public String crearContacto(@RequestBody Contacto contacto) {
         return contaServ.crearContacto(contacto);
     }
     
     @DeleteMapping ("/contacto/borrar/{id}")
-    @CrossOrigin(origins = "http://localhost:4200")
     public String borrarContacto(@PathVariable Long id) {
         return contaServ.borrarContacto(id);
     }
     
     @GetMapping ("/contacto/traer/{id}")
-    @CrossOrigin(origins = "http://localhost:4200")
     public Contacto traerContacto(@PathVariable Long id) {
         return contaServ.traerContacto(id);
     }
     
     @PutMapping ("/contacto/editar/{id}")
-    @CrossOrigin(origins = "http://localhost:4200")
     public Contacto editarContacto(@PathVariable Long id, @RequestBody Contacto contacto) {
         return contaServ.editarContacto(id, contacto);
     }

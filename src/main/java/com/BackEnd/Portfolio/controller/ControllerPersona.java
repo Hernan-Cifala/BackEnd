@@ -22,31 +22,26 @@ public class ControllerPersona {
     private IPersonaService persoServ;
     
     @GetMapping ("/persona/traer")
-    @CrossOrigin(origins = "http://localhost:4200")
     public List<Persona> traerPersonas() {
         return persoServ.traerPersonas();
     }
     
     @PostMapping ("/persona/crear")
-    @CrossOrigin(origins = "http://localhost:4200")
     public String crearPersona(@RequestBody Persona persona) {
         return persoServ.crearPersona(persona);
     }
     
     @DeleteMapping ("/persona/borrar/{id}")
-    @CrossOrigin(origins = "http://localhost:4200")
     public String borrarPersona(@PathVariable Long id) {
         return persoServ.borrarPersona(id);
     }
     
     @GetMapping ("/persona/traer/{id}")
-    @CrossOrigin(origins = "http://localhost:4200")
     public Persona traerPersona(@PathVariable Long id) {
         return persoServ.traerPersona(id);
     }
     
     @PutMapping ("/persona/editar/{id}")
-    @CrossOrigin(origins = "http://localhost:4200")
     public Persona editarPersona(@PathVariable Long id, @RequestBody Persona persona) {
         return persoServ.editarPersona(id, persona);
     }
