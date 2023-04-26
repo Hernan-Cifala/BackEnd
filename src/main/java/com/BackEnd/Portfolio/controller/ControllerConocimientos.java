@@ -22,31 +22,26 @@ public class ControllerConocimientos {
     private IConocimientosService conoServ;
     
     @GetMapping ("/conocimientos/traer")
-    @CrossOrigin(origins = "http://localhost:4200")
     public List<Conocimientos> traerConocimientos() {
         return conoServ.traerConocimientos();
     }
     
     @PostMapping ("/conocimientos/crear")
-    @CrossOrigin(origins = "http://localhost:4200")
     public String crearConocimientos(@RequestBody Conocimientos conocimientos) {
         return conoServ.crearConocimientos(conocimientos);
     }
     
     @DeleteMapping ("/conocimientos/borrar/{id}")
-    @CrossOrigin(origins = "http://localhost:4200")
     public String borrarConocimientos(@PathVariable Long id) {
         return conoServ.borrarConocimientos(id);
     }
     
     @GetMapping ("/conocimientos/traer/{id}")
-    @CrossOrigin(origins = "http://localhost:4200")
     public Conocimientos traerConocimientos(@PathVariable Long id) {
         return conoServ.traerConocimientos(id);
     }
     
     @PutMapping ("/conocimientos/editar/{id}")
-    @CrossOrigin(origins = "http://localhost:4200")
     public Conocimientos editarConocimientos(@PathVariable Long id, @RequestBody Conocimientos conocimientos) {
         return conoServ.editarConocimientos(id, conocimientos);
     }
