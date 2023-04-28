@@ -22,26 +22,31 @@ public class ControllerPersona {
     private IPersonaService persoServ;
     
     @GetMapping ("/persona/traer")
+    @CrossOrigin ("https://hernan-cifala-portfolio.web.app")
     public List<Persona> traerPersonas() {
         return persoServ.traerPersonas();
     }
     
     @PostMapping ("/persona/crear")
+    @CrossOrigin ("https://hernan-cifala-portfolio.web.app")
     public String crearPersona(@RequestBody Persona persona) {
         return persoServ.crearPersona(persona);
     }
     
     @DeleteMapping ("/persona/borrar/{id}")
+    @CrossOrigin ("https://hernan-cifala-portfolio.web.app")
     public String borrarPersona(@PathVariable Long id) {
         return persoServ.borrarPersona(id);
     }
     
     @GetMapping ("/persona/traer/{id}")
+    @CrossOrigin ("https://hernan-cifala-portfolio.web.app")
     public Persona traerPersona(@PathVariable Long id) {
         return persoServ.traerPersona(id);
     }
     
     @PutMapping ("/persona/editar/{id}")
+    @CrossOrigin ("https://hernan-cifala-portfolio.web.app")
     public Persona editarPersona(@PathVariable Long id, @RequestBody Persona persona) {
         return persoServ.editarPersona(id, persona);
     }
