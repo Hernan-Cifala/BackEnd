@@ -22,26 +22,31 @@ public class ControllerHerramientas {
     private IHerramientasService herraServ;
     
     @GetMapping ("/herramientas/traer")
+    @CrossOrigin ("https://hernan-cifala-portfolio.web.app")
     public List<Herramientas> traerHerramientas() {
         return herraServ.traerHerramientas();
     }
     
     @PostMapping ("/herramientas/crear")
+    @CrossOrigin ("https://hernan-cifala-portfolio.web.app")
     public String crearHerramientas(@RequestBody Herramientas herramientas) {
         return herraServ.crearHerramientas(herramientas);
     }
     
     @DeleteMapping ("/herramientas/borrar/{id}")
+    @CrossOrigin ("https://hernan-cifala-portfolio.web.app")
     public String borrarHerramientas(@PathVariable Long id) {
         return herraServ.borrarHerramientas(id);
     }
     
     @GetMapping ("/herramientas/traer/{id}")
+    @CrossOrigin ("https://hernan-cifala-portfolio.web.app")
     public Herramientas traerHerramientas(@PathVariable Long id) {
         return herraServ.traerHerramientas(id);
     }
     
     @PutMapping ("/herramientas/editar/{id}")
+    @CrossOrigin ("https://hernan-cifala-portfolio.web.app")
     public Herramientas editarHerramientas(@PathVariable Long id, @RequestBody Herramientas herramientas) {
         return herraServ.editarHerramientas(id, herramientas);
     }

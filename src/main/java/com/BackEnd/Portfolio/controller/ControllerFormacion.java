@@ -22,26 +22,31 @@ public class ControllerFormacion {
     private IFormacionService formaServ;
     
     @GetMapping ("/formacion/traer")
+    @CrossOrigin ("https://hernan-cifala-portfolio.web.app")
     public List<Formacion> traerFormaciones() {
         return formaServ.traerFormaciones();
     }
     
     @PostMapping ("/formacion/crear")
+    @CrossOrigin ("https://hernan-cifala-portfolio.web.app")
     public String crearFormacion(@RequestBody Formacion formacion) {
         return formaServ.crearFormacion(formacion);
     }
     
     @DeleteMapping ("/formacion/borrar/{id}")
+    @CrossOrigin ("https://hernan-cifala-portfolio.web.app")
     public String borrarFormacion(@PathVariable Long id) {
         return formaServ.borrarFormacion(id);
     }
     
     @GetMapping ("/formacion/traer/{id}")
+    @CrossOrigin ("https://hernan-cifala-portfolio.web.app")
     public Formacion traerFormacion(@PathVariable Long id) {
         return formaServ.traerFormacion(id);
     }
     
     @PutMapping ("/formacion/editar/{id}")
+    @CrossOrigin ("https://hernan-cifala-portfolio.web.app")
     public Formacion editarFormacion(@PathVariable Long id, @RequestBody Formacion formacion) {
         return formaServ.editarFormacion(id, formacion);
     }

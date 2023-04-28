@@ -22,26 +22,31 @@ public class ControllerTareas {
     private ITareasService tareServ;
     
     @GetMapping ("/tareas/traer")
+    @CrossOrigin ("https://hernan-cifala-portfolio.web.app")
     public List<Tareas> traerTareas() {
         return tareServ.traerTareas();
     }
     
     @PostMapping ("/tareas/crear")
+    @CrossOrigin ("https://hernan-cifala-portfolio.web.app")
     public String crearTareas(@RequestBody Tareas tareas) {
         return tareServ.crearTareas(tareas);
     }
     
     @DeleteMapping ("/tareas/borrar/{id}")
+    @CrossOrigin ("https://hernan-cifala-portfolio.web.app")
     public String borrarTareas(@PathVariable Long id) {
         return tareServ.borrarTareas(id);
     }
     
     @GetMapping ("/tareas/traer/{id}")
+    @CrossOrigin ("https://hernan-cifala-portfolio.web.app")
     public Tareas traerTareas(@PathVariable Long id) {
         return tareServ.traerTareas(id);
     }
     
     @PutMapping ("/tareas/editar/{id}")
+    @CrossOrigin ("https://hernan-cifala-portfolio.web.app")
     public Tareas editarTareas(@PathVariable Long id, @RequestBody Tareas tareas) {
         return tareServ.editarTareas(id, tareas);
     }

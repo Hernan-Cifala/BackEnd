@@ -23,26 +23,31 @@ public class ControllerExperiencia {
     private IExperienciaService expeServ;
     
     @GetMapping ("/experiencia/traer")
+    @CrossOrigin ("https://hernan-cifala-portfolio.web.app")
     public List<Experiencia> traerExperiencias() {
         return expeServ.traerExperiencias();
     }
     
     @PostMapping ("/experiencia/crear")
+    @CrossOrigin ("https://hernan-cifala-portfolio.web.app")
     public String crearExperiencia(@RequestBody Experiencia experiencia) {
         return expeServ.crearExperiencia(experiencia);
     }
     
     @DeleteMapping ("/experiencia/borrar/{id}")
+    @CrossOrigin ("https://hernan-cifala-portfolio.web.app")
     public String borrarExperiencia(@PathVariable Long id) {
         return expeServ.borrarExperiencia(id);
     }
     
     @GetMapping ("/experiencia/traer/{id}")
+    @CrossOrigin ("https://hernan-cifala-portfolio.web.app")
     public Experiencia traerExperiencia(@PathVariable Long id) {
         return expeServ.traerExperiencia(id);
     }
     
     @PutMapping ("/experiencia/editar/{id}")
+    @CrossOrigin ("https://hernan-cifala-portfolio.web.app")
     public Experiencia editarExperiencia(@PathVariable Long id, @RequestBody Experiencia experiencia) {
         return expeServ.editarExperiencia(id, experiencia);
     }
